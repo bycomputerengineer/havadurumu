@@ -1,0 +1,1 @@
+web server bilgi çekme - http://www.godilman.com/2016/09/28/php-ile-meteoroloji-hava-durumu-bilgileri-cekme-guncel/
