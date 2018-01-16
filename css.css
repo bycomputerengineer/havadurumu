@@ -83,21 +83,38 @@ header p{
 }
 
 .item-pl{
+	margin-left: 1%;
+	width: 20%;
 	float: left;
 	color: white;
-	font-size: 3em;
+	font-size: 2vw;
+    text-shadow: 3px 2px black;
+}
+
+.item-ph{
+	margin-left: 1%;
+	width: 40%;
+	float: left;
+	color: white;
+	font-size: 2vw;
     text-shadow: 3px 2px black;
 }
 
 .item-img{
+	margin: 0px 1%;
 	float: left;
-	width: 70px;
-	height: 70px;
+	width: 3vw;
+	height: 3vw;
 }
 
 .item-pr{
-	float: left;
+	width: 13%;
+	float: right;
 	color: white;
-	font-size: 3em;
+	font-size: 2vw;
     text-shadow: 3px 2px black;
+}
+
+.carousel-control-prev, .carousel-control-next{
+	width: 5%
 }

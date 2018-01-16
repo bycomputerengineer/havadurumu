@@ -5,14 +5,14 @@
 	foreach ($sehirler as $sehir) {
 		$veri1 = file_get_contents($servisUrl.'/merkezler?il='.$sehir, true);
 		$bilgi_dizisi1 = json_decode($veri1);
-		echo '<div class="item row">';
+		echo '*<div class="item row">';
 			foreach($bilgi_dizisi1 as $i){
 				$veri2 = file_get_contents($servisUrl.'/sondurumlar?istno='.$i->sondurumIstNo, true);
 				$bilgi_dizisi2 = json_decode($veri2);
 				foreach ($bilgi_dizisi2 as $j) {
-					echo '<p class="item-pl col-sm-3">'.$i->il."</p>";
-					echo '<img class="item-img col-sm-1" src="hadiseler/'.$j->hadiseKodu.'.png">';
-					echo '<p class="item-pl col-sm-5">';
+					echo '<p class="item-pl">'.$i->il."</p>";
+					echo '<img class="item-img" src="hadiseler/'.$j->hadiseKodu.'.png">';
+					echo '<p class="item-ph">';
 					switch ($j->hadiseKodu) {
 						case 'A': echo "Açık"; break;
 						case 'AB': echo "Az Bulutlu"; break;
@@ -43,9 +43,9 @@
 						case 'SGK': echo "Soğuk"; break;
 						case 'HHY': echo "Yağışlı"; break;
 					}
-					echo '</p><p class="item-pr col-sm-2">Nem: '.$j->nem."</p>";
-					echo '</p><p class="item-pr col-sm-1">'.$j->sicaklik."&#x2103;</p>";
-					echo '<p style="font-size: 3em;"></br><p>';
+					echo '</p><p class="item-pr">'.$j->sicaklik."&#x2103;</p>";
+					echo '</p><p class="item-pr">Nem: '.$j->nem."</p>";
+					echo '<p style="font-size: 2vw;"></br><p>';
 				}
 			}
 		echo '</div>';
